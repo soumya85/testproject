@@ -1,0 +1,54 @@
+<ion-view view-title="Profile Details" class="has-footer">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        
+		 <div class="content" align="center" style="padding-top:4%;" ng-init="fetch_user()" >
+		  <h3>My Profile</h3>
+		</div>
+		<div class="list" style="padding-right: 20px;" >
+		  <label class="item item-input">
+			<input class="text-box-resize"  value="{{member_id}}" type="number">
+		  </label>
+		  <label class="item item-input">
+			<input class="text-box-resize" value="{{user_id}}" type="number" >
+		  </label>
+		  <label class="item item-input">
+			<input class="text-box-resize" value="{{fullname}}"  type="text" >
+		  </label>
+		  <label class="item item-input">
+			<input  class="text-box-resize" value="{{dob}}" >
+		  </label>
+		  <label class="item item-input">
+			<input  class="text-box-resize" value="{{email}}" type="email" >
+		  </label>
+		  <label class="item item-input">
+			<input  class="text-box-resize" value="{{family_head}}" >
+		  </label>
+		  <label class="item item-input">
+			<input class="text-box-resize" value="{{gender}}" >
+		  </label>
+		   <label class="item item-input">
+			<input class="text-box-resize" value="{{phone}}" type="number" >
+		  </label>		   
+		</div>		
+        <div class="padding" >
+            <button class="button button-full regis-button1" ng-click="register_fun()">Update</button>
+        </div>
+		
+     
+        
+    </ion-content>
+	<div class="tabs tabs-icon-top " style="height:12%;">
+            <a ui-sref="app.home" class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+                <i class="icon ion-earth" style="font-size: 24px;"></i> In Around
+            </a>
+            <a  class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+                <i class="icon ion-android-pin" style="font-size: 24px;"></i> Places
+            </a>
+            <a  class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+                <i class="icon ion-pricetag" style="font-size: 24px;"></i> Deals
+            </a>
+			 <a ui-sref="app.localevent" class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+                <i class="icon ion-calendar" style="font-size: 24px;"></i> Events
+            </a>
+        </div>
+</ion-view>

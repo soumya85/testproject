@@ -1,0 +1,80 @@
+<ion-side-menus enable-menu-with-back-views="true">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive-900" ng-class="{expanded: isExpanded, 'has-header-fab-left': hasHeaderFabLeft, 'has-header-fab-right': hasHeaderFabRight}" align-title="left">
+            <ion-nav-back-button class="no-text">
+            </ion-nav-back-button>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-android-menu" menu-toggle="right">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="fabContent"></ion-nav-view>
+        <ion-nav-view name="menuContent" ng-class="{expanded: isExpanded}" ></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="right">
+        <ion-header-bar class="dark-bg expanded" style="background-color: #004f92!important;">
+           <span class="avatar" style="background: url('img/user.png'); background-size: cover; margin-top:16px"></span>
+		   <span style="margin-top:50px;margin-left:120px">
+				<p style="color:#fff;font-size:12px;margin:0!important;padding:0!important;font-family: 'Lato', sans-serif!important;">Welcome</p>
+				<p style="color:#fff;margin-top:0!important;font-size:18px;font-family: 'Lato', sans-serif!important;" ng-show="loginState!=true">Guest</p>				
+				<p style="color:#fff;margin-top:0!important;font-size:18px;font-family: 'Lato', sans-serif!important;" ng-show="loginState==true">{{username}}</p>	
+			</span>
+			<!--
+			<div class="list">
+				<a class="item item-avatar" href="#">
+				  <img src="user.png">
+				  <p>Welcome</p>
+				  <h2>Guest</h2>
+				</a>
+			</div>
+			-->
+           <!-- <h2>Thronester</h2>  -->
+        </ion-header-bar>
+        <ion-content class="stable-bg has-expanded-header" style="background-color: #fff;">
+            <ion-list>
+				<ion-item nav-clear menu-close ui-sref="app.signin" ng-if="loginState!=true" style="border-bottom: 1px solid #c2c2c2;color:#022c4f;font-size:15px;">
+                  <i class="ion-log-in" style="margin-right:10px"></i> &nbsp;Login
+                </ion-item>
+                <ion-item nav-clear menu-close ng-if="loginState!=true" ui-sref="app.regis" style="border-bottom: 1px solid #c2c2c2;color:#022c4f;font-size:15px;">
+                     <i class="icon ion-compose" style="margin-right:10px"></i> &nbsp;Register
+                </ion-item>
+				<ion-item nav-clear menu-close ng-click="openInAppBrowser()" style="border-bottom: 1px solid #c2c2c2;color:#022c4f;font-size:15px;">
+                     <i class="icon ion-person-stalker" style="margin-right:10px"></i> &nbsp;Admin Panel
+                </ion-item>
+                <ion-item nav-clear menu-close ng-if="loginState==true" ui-sref="app.member" style="border-bottom: 1px solid #c2c2c2;color:#022c4f;font-size:15px;">
+                     <i class="icon ion-person-stalker" style="margin-right:10px"></i> &nbsp;Member Zone
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.home" style="border-bottom: 1px solid #c2c2c2;color:#022c4f;font-size:15px;">
+                     <i class="icon ion-earth" style="margin-right:10px"></i> &nbsp;In Around
+                </ion-item>
+                <ion-item nav-clear menu-close style="border-bottom: 1px solid #c2c2c2;color:#022c4f;font-size:15px;">
+                     <i class="icon ion-ios-location" style="margin-right:10px"></i> &nbsp;Places
+                </ion-item>
+				<ion-item nav-clear menu-close style="border-bottom: 1px solid #c2c2c2;color:#022c4f!important;font-size:15px;">
+                     <i class="icon ion-pricetag" style="margin-right:10px"></i> &nbsp;Deals
+                </ion-item>
+				<ion-item nav-clear menu-close ui-sref="app.localevent" style="color:#022c4f;font-size:15px;">
+                    <i class="icon ion-ios-calendar-outline" style="margin-right:10px"></i> &nbsp;Events
+                </ion-item>
+				<ion-item nav-clear menu-close ng-click="logout()" ng-if="loginState==true" style="border-bottom: 1px solid #c2c2c2;color:#022c4f;font-size:15px;">
+                  <i class="ion-log-out" style="margin-right:10px"></i> &nbsp;Logout
+                </ion-item>
+             <!--   <ion-item nav-clear menu-close ui-sref="app.activity">
+                    Activity
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.login">
+                    Login
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.profile">
+                    Profile
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.friends">
+                    Friends
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.gallery">
+                    Gallery
+                </ion-item>           -->
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

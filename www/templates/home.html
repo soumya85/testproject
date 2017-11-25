@@ -1,0 +1,46 @@
+<ion-view view-title="Newtown Business Club" >
+    <ion-content ng-class="{expanded:$scope.isExpanded}" class="has-footer fix-content" ng-init="fetch_family();"> 
+		<div class="hero slide-up" style="background-image: url('http://www.noboundstech.com/businessclub/assests/img/Eastern_High_-_Rajarhat_2012-04-11_9385.JPG');">
+           <div  class="header-member-div" style="col=100%">
+			   <a ui-sref="app.signin" ng-if="loginState==false" style="text-decoration:none;color:#fff">
+					<i class="icon ion-person-stalker" style="margin-right:10px; color:#fff;"></i>
+					Member Zone
+			   </a>
+			   <a ui-sref="app.member" ng-if="loginState!=false" style="text-decoration:none;color:#fff">
+					<i class="icon ion-person-stalker" style="margin-right:10px; color:#fff;"></i>
+					Member Zone
+			   </a>
+		   </div>
+        </div>
+        <div class="content" style="padding-top:6%;">
+		  <h3 style="color:#004f92;padding-left:6%;">New Town, Kolkata</h3>
+		  <h5 class="home-content">
+		  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis, ex ut lacinia facilisis, dui lectus facilisis mauris, id mattis nunc dui eu purus. Morbi non ipsum ante. Sed tortor leo, imperdiet eget nibh sit amet, dictum ornare nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque consequat nulla sit amet ornare vestibulum. Curabitur finibus pellentesque erat id malesuada. Nam eu volutpat nulla. Praesent luctus tempus massa at consequat. Quisque non arcu quis est consectetur pharetra.
+		  </h5>		  
+		</div>
+		
+		<div class="list list-h" ng-repeat="i in fdata.result">
+			<a class="item item-thumbnail-left">
+			<img ng-src="{{i.place_image}}" class="list-img"/>
+			  <h2 style="white-space: nowrap;">{{i.place_name}}</h2>
+			  <p style="white-space: nowrap;">{{i.place_desc}}</p>
+			</a>
+		</div>
+    </ion-content>
+		<ion-footer>
+		  <div class="tabs tabs-icon-top " style="height:12%;">
+				<a ui-sref="app.home" class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+					<i class="icon ion-earth" style="font-size: 24px;"></i> In Around
+				</a>
+				<a  class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+					<i class="icon ion-android-pin" style="font-size: 24px;"></i> Places
+				</a>
+				<a  class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+					<i class="icon ion-pricetag" style="font-size: 24px;"></i> Deals
+				</a>
+				 <a ui-sref="app.localevent" class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+					<i class="icon ion-calendar" style="font-size: 24px;"></i> Events
+				</a>
+			</div>
+		</ion-footer>
+</ion-view>

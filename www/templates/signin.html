@@ -1,0 +1,53 @@
+<ion-view view-title="">
+    <ion-content ng-class="{expanded:$scope.isExpanded}"  class="has-footer">
+	
+        <div class="hero slide-up" style="background-image: url('img/login-page-header-bg.png');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/newtwonbusinessclub-logo.png');"></div>
+            </div>
+        </div>
+		 <div class="content" align="center" style="padding-top:4%;">
+		  <h3 style="padding-bottom:0px!important;margin-bottom:0px!important;">Welcome User!</h3>
+		</div>
+		<!--
+		<div class="list my-list" style="margin-top:0">
+            <ion-md-input placeholder="&#xf132;&nbspUser Name" highlight-color="balanced"  ng-model="login.username"></ion-md-input>
+            <ion-md-input placeholder="&#xf392;&nbspPassword" highlight-color="energized" type="password"  ng-model="login.password"></ion-md-input>
+        </div>
+		-->
+		<div class="list" style="padding-right: 20px;">
+		  <label class="item item-input" >
+		     <i class="icon ion-person placeholder-icon" ></i>
+			<input type="text" class="text-box-resize" placeholder="User Name" ng-model="login.username">
+		  </label>
+		  <label class="item item-input">
+		  <i class="icon ion-locked placeholder-icon" ></i>
+			<input type="password" class="text-box-resize" placeholder="Password"  ng-model="login.password">
+		  </label>
+		</div>
+		<p class="err-msg" ng-if="login_error != ''">{{login_error}}</p>
+        <div class="padding ">
+            <button class="button button-full login-button" ng-click="login_fun()">Login</button>
+        </div>
+		<div class="padding">
+            <button class="button button-full regis-button" ui-sref="app.regis">Register</button>
+        </div>
+		 
+		<h5 align="center"style="color:#bbb;margin-top:-12px!important;">Forgot Password?</h5>      
+        
+    </ion-content>
+	<div class="tabs tabs-icon-top " style="height:12%;">
+            <a ui-sref="app.home" class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+                <i class="icon ion-earth" style="font-size: 24px;"></i> In Around
+            </a>
+            <a  class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+                <i class="icon ion-android-pin" style="font-size: 24px;"></i> Places
+            </a>
+            <a  class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+                <i class="icon ion-pricetag" style="font-size: 24px;"></i> Deals
+            </a>
+			 <a ui-sref="app.localevent" class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+                <i class="icon ion-calendar" style="font-size: 24px;"></i> Events
+            </a>
+        </div>
+</ion-view>

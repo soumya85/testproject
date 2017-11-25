@@ -1,0 +1,164 @@
+
+<div  ng-controller="UserControler"   ng-init="fetch_user();fetch_family();fetch_membership();fetch_family();fetch_bill();" >
+	
+	<div class="list card card-list">
+		<div class="list">
+				<h3 class="card-head"><i class="icon ion-person"></i>&nbsp;
+				Personal Details</h3>
+				  <label class="item item-input card-body height-min-zero" >
+					<span class="input-label" >Name: </span>{{Uuser.fullname}}
+				  </label>
+				  <label class="item item-input card-body height-min-zero ">
+					<span class="input-label">DOB: </span>
+					<input type="date" value="{{Uuser.dob}}" ng-model="Uuser.dob">
+				  </label>
+				  <label class="item item-input card-body height-min-zero">
+					<span class="input-label">Address: </span>
+					<input type="text" value="{{Uuser.address}}"  ng-model="Uuser.address">
+				  </label>
+				   <label class="item item-input card-body height-min-zero">
+					<span class="input-label">Qualification: </span>
+					<input type="text" value="{{Uuser.qualification}}" ng-model="Uuser.qualification">
+				  </label>
+				   <label class="item item-input card-body height-min-zero">
+					<span class="input-label">Profession: </span>
+					<input type="text" value="{{Uuser.profession}}" ng-model="Uuser.profession">
+				  </label>
+				  <label class="item item-input card-body height-min-zero">
+					<span class="input-label">Email: </span>{{Uuser.email}}
+				  </label>
+				  <label class="item item-input card-body height-min-zero">
+					<span class="input-label">Phone: </span>{{Uuser.phone}}
+				  </label>
+		</div>
+		<button class="update-button" ng-click="update_user()">
+		  Update
+		</button>
+	</div>
+    
+	<div class="list card card-list">
+		<div class="list">
+				<h3 class="card-head"><i class="icon ion-android-lock"></i>&nbsp;
+				Password Change</h3>
+				  <label class="item item-input card-body height-min-zero" >
+					<span class="input-label" >Type old password: </span>
+					<input type="password" ng-model="pwdchange.old_password">
+				  </label>
+				  <label class="item item-input card-body height-min-zero" >
+					<span class="input-label" >Type new password: </span>
+					<input type="password"  ng-model="pwdchange.new_password">
+				  </label>
+				  <label class="item item-input card-body height-min-zero" >
+					<span class="input-label" >Retype password: </span>
+					<input type="password"  ng-model="pwdchange.confirm_new_password">
+				  </label>
+		</div>
+		<p class="err-msg" ng-if="pwdchange_error != ''">{{pwdchange_error}}</p>
+		<button class="update-button" ng-click="pwdchange_fun()">
+		  Update
+		</button>
+	</div>
+	
+	<div class="list card card-list">
+		<div class="list">
+				<h3 class="card-head"><i class="icon ion-android-contacts"></i>&nbsp;
+				Family Details</h3>
+				  <label class="item item-input card-body height-min-zero" ng-repeat="item in fdata.result">
+				  {{item.fullname}} 
+				  </label>	
+		</div>
+	</div>
+	
+	<div class="list card card-list">
+		<div class="list">
+				<h3 class="card-head"><i class="icon ion-person-add"></i>&nbsp;
+				Membership Details</h3>
+				  <label class="item item-input card-body height-min-zero" >
+					<span class="input-label" >Member ID: </span>{{membershipid}}
+				  </label>
+				  <label class="item item-input card-body height-min-zero ">
+					<span class="input-label">Member Type: </span>{{member_type}}
+				  </label>
+				  <label class="item item-input card-body height-min-zero">
+					<span class="input-label">Member Since: </span>{{member_since}}
+				  </label>
+				  <label class="item item-input card-body height-min-zero">
+					<span class="input-label">Renewal Date: </span>{{renewal_date}}
+				  </label>
+		</div>
+	</div>
+	
+	
+	<div class="list card card-list">
+		<div class="list"  ng-if="bdata.status==true">
+				<h3 class="card-head"><i class="icon ion-card"></i>&nbsp;
+				Bill Details</h3>
+				<p ng-repeat="x in bdata.result">
+				  <label class="item item-input card-body height-min-zero" >
+					<span class="input-label" >Bill at: </span>
+					<input type="text" ng-readonly="true" value="{{x.billed_at}}">
+				  </label>
+				  <label class="item item-input card-body height-min-zero ">
+					<span class="input-label">Description: </span>
+					<input type="text" ng-readonly="true" value="{{x.description}}">
+				  </label>
+				  <label class="item item-input card-body height-min-zero">
+					<span class="input-label">Bill ammount: </span>
+					<input type="text" ng-readonly="true" value="{{x.amount}}">
+				  </label>
+				  <img ng-src="{{x.bill_image}}" class="bill-image" />
+				</p>
+		</div>
+		<div class="list" ng-if="bdata.status!=true">
+				<h3 class="card-head"><i class="icon ion-card"></i>&nbsp;
+				Bill Details</h3>
+				  <label class="item item-input card-body height-min-zero" >
+					{{bdata.message}}
+				  </label>
+		</div>
+	</div>
+	
+	<div class="list card card-list">
+		<div class="list">
+				<h3 class="card-head"><i class="icon ion-card"></i>&nbsp;
+				Fees & Bill Details</h3>
+				  
+					<div class="row border-bottom">
+						
+							<div class="col col-75"><h4 class="hotel-name">Hotel Name</h4><span class="bill-status">paid</span>
+							<p class="bill-content">Lorem ipsum dolor sit amet, con dolor sit</p>
+                            <p class="date-invoice">31/3/2017 | Invoice 203</p>
+				
+							</div>
+							
+							<div class="col col-25 amount-section"><span class="total-amount">Rs.2000/-</span>
+							<p><button class="bill-button" >View Bill</button></p>
+							</div>
+						
+						
+					</div>
+					
+					<div class="row border-bottom">
+						
+							<div class="col col-75"><h4 class="hotel-name">Hotel Name</h4><span class="bill-status-two">Due</span>
+							<p class="bill-content">Lorem ipsum dolor sit amet, con dolor sit </p>
+                            <p class="date-invoice">31/3/2017 | Invoice 203</p>
+				
+							</div>
+							
+							<div class="col col-25 amount-section"><span class="total-amount">Rs.5000/-</span>
+							<p><button class="bill-button" >View Bill</button></p>
+							</div>
+						
+						
+					</div>
+			
+						
+						
+					</div>
+
+		</div>
+		
+	</div>
+	
+</div>

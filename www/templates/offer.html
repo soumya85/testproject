@@ -1,0 +1,26 @@
+ <ion-content class="has-header has-footer" ng-controller="MemberControler">
+	<div class="list" ng-init="offer_fun()" >
+	<a class="item" href="#" style="border-bottom: 1px solid #c2c2c2;padding-bottom:10px;padding-top:12px;padding-right:2px" ng-repeat="x in data.result">
+			<div class="row row-pad" style="padding-bottom:0px;" >
+				<div class="col col-70" ">
+				
+					<h3 class="news-title">{{x.offer_head}}</h3>
+					<span class="date-time">	{{x.date| date :'dd/MM/yyyy'}}&nbsp; {{x.weak}} &nbsp; {{ x.date | date : 'hh:mm a' }}</span>
+				</div>
+				<div class="col col-30 " style="padding:0px!important;text-align:right;">
+						
+							
+								<i class="ion-thumbsup "  ng-click="likedislike_fun(x.offer_id,'L',$index,'O'); disable_like=true; disable_dislike=false;"  ng-class="{'like-active': x.reaction == 'like','like-ico': x.reaction == 'dislike' || x.reaction == 'no_reaction'}" ng-disabled="disable_like">&nbsp; {{x.totalLike}} &nbsp;&nbsp;</i>
+								<i class="ion-thumbsdown "  ng-click="likedislike_fun(x.offer_id,'D',$index,'O'); disable_like=false; disable_dislike=true;" ng-class="{'like-active': x.reaction == 'dislike','like-ico': x.reaction == 'like' || x.reaction == 'no_reaction'}" ng-disabled="disable_dislike">&nbsp; {{x.totalDisLike}}</i>
+							
+						
+				</div>
+			</div>
+			<div class="row">
+				<div class="col ">
+					<p class="news-details">{{x.offer_desc}}</p>
+				</div>
+			</div>	
+		</a>	
+	</div>
+ </ion-content>

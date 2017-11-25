@@ -1,0 +1,127 @@
+<ion-content  ng-controller="MemberControler">
+	<div ng-hide="hideAll">
+		<ul style="border-bottom: 1px solid #c2c2c2;color:#022c4f;font-size:15px;">
+			<li class="item " ng-click="profilePage = true; hideAll = true">
+				<div class="row">
+				  <div class="col col-90">
+						<div class="row">
+								  <div class="icon-menu">
+									 <i class="ion-person icon-image"></i>
+								  </div>
+								  <div class=" icon-menu-name">
+									My Profile
+								  </div>
+						</div>
+				  </div>				
+				  <div class="col icon-arrow" >
+					>
+				  </div>
+				</div>
+			</li>
+		</ul>
+
+
+	   <ul style="border-bottom: 1px solid #c2c2c2;color:#022c4f;font-size:15px;">
+		<li class="item " ng-click="sugestionPage = true; hideAll = true">
+			<div class="row">
+			  <div class="col col-90">
+					<div class="row">
+							  <div class="icon-menu">
+								 <i class="icon ion-compose icon-image"></i>
+							  </div>
+							  <div class=" icon-menu-name">
+								Sugestion
+							  </div>
+					</div>
+			  </div>				
+			  <div class="col icon-arrow" >
+				>
+			  </div>
+			</div>
+		 </li>
+	  </ul>
+  
+	   <ul style="border-bottom: 1px solid #c2c2c2;color:#022c4f;font-size:15px;">
+		<li class="item ">
+			<div class="row">
+			  <div class="col col-90">
+					<div class="row">
+							  <div class="icon-menu">
+								 <i class="icon ion-card icon-image"></i>
+							  </div>
+							  <div class=" icon-menu-name">
+								Slot Booking
+							  </div>
+					</div>
+			  </div>				
+			  <div class="col icon-arrow" >
+				>
+			  </div>
+			</div>
+		 </li>
+	  </ul>
+  
+	  <ul  style="border-bottom: 1px solid #c2c2c2;color:#022c4f;font-size:15px;">
+		<li class="item "  ng-click="rulesPage = true; hideAll = true">
+			<div class="row">
+			  <div class="col col-90">
+					<div class="row">
+							  <div class="icon-menu">
+								 <i class="icon ion-clipboard icon-image"></i>
+							  </div>
+							  <div class=" icon-menu-name">
+								Club Rules
+							  </div>
+					</div>
+			  </div>				
+			  <div class="col icon-arrow" >
+				>
+			  </div>
+			</div>
+		 </li>
+	  </ul>
+	  <ul  >
+		<li class="item ">
+			<div class="row">
+			  <div class="col col-90">
+					<div class="row">
+							  <div class="icon-menu">
+								 <i class="icon ion-card icon-image"></i>
+							  </div>
+							  <div class=" icon-menu-name">
+								Bill Details
+							  </div>
+					</div>
+			  </div>				
+			  <div class="col icon-arrow" >
+				>
+			  </div>
+			</div>
+		 </li>
+	  </ul>
+        
+        <ul  >
+		<li class="item ">
+			<div class="row">
+			  <div class="col col-90">
+					<div class="row">
+							  <div class="icon-menu">
+								 <i class="icon ion-person-stalker icon-image"></i>
+							  </div>
+							  <div class=" icon-menu-name">
+								Club Officials
+							  </div>
+					</div>
+			  </div>				
+			  <div class="col icon-arrow" >
+				>
+			  </div>
+			</div>
+		 </li>
+	  </ul> 
+	</div>
+	
+	<div ng-include="'templates/profile_details.html'" ng-show="profilePage"></div>
+	<div ng-include="'templates/sugestion.html'" ng-show="sugestionPage"></div>
+	<div ng-include="'templates/rules.html'" ng-show="rulesPage"></div>
+ </ion-content>

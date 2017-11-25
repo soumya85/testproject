@@ -1,0 +1,517 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+/* General
+==================================*/
+h1 {
+    color: #fff;
+    text-shadow: 0 1px 0px #000;
+    font-size: 42px;
+}
+*{
+	font-family: 'Lato', sans-serif!important;
+}
+
+/* Utilities
+==================================*/
+.title-bordered {
+    border-top: solid 2px #bbb;
+    padding-top: 30px;
+}
+
+p {
+    color: #555;
+    margin: 0 0 25px;
+}
+
+.scroll {
+    height: 100%;
+}
+
+
+/* Menu
+==================================*/
+
+.bar {
+    border: none;
+    background-image:none!important;
+    background-position: bottom;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.menu .bar.bar-header.expanded {
+    transition: all .5s ease-in-out;
+}
+
+.menu-open .bar.bar-header.expanded {
+    background-color: #222;
+}
+
+.menu h2 {
+    bottom: 0;
+    font-size: 18px;
+    left: 16px;
+    position: absolute;
+}
+
+.menu .avatar {
+    height: 88px;
+    width: 88px;
+}
+
+.menu.menu-left * {
+    font-weight: bold;
+}
+
+.menu-open .ion-navicon {
+    transform: rotate(-360deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-open .ion-navicon:before {
+    content: "\f2ca";
+}
+
+
+/* Login
+==================================*/
+.app-icon {
+    background-color: #fff;
+    background: url('../img/crown.jpg') center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 125px;
+    margin: 0 auto;
+    width: 125px;
+}
+
+.social-login {
+    position: fixed;
+    bottom: 0;
+}
+/*For Login header
+==================================*/
+.hero>.content>.avatar {
+    background-position: center;
+    background-size: cover;
+    border: 0 !important;
+    border-radius: 0!important;
+    display: inline-block;
+    height: 100px;
+    left: auto;
+    margin-bottom: 10px;
+    position: relative;
+    width: 320px;
+}
+
+.item-md-label .input-label {
+    letter-spacing: .25rem;
+    padding: 0 10px;
+    color: #000;
+}
+
+.item-md-label input {
+    background-color: transparent;
+    bottom: 0;
+    color: #000;
+    letter-spacing: .25rem;
+    padding: 20px 10px;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid #000;
+}
+.item-md-label .input-label {
+    font-family: Ionicons, "Open Sans", Verdana, sans-serif;
+}
+
+.bar-header {
+    top: 0;
+    border:0!important;
+	background-color: #67b845!important;
+}
+
+.bar{
+	box-shadow:none !important;
+}
+
+
+/*For Login and regis button
+==================================*/
+.login-button{
+	margin-top:-20px!important;
+	margin-bottom:5px!important;
+	margin-left: 2%;
+    margin-right: 2%!important;
+	background-color: #67b845;
+	color: #fff;
+	border-radius:5px;
+	width: 95%!important;
+    font-size: initial;
+	text-transform: inherit!important;
+}
+.regis-button{
+	margin-top:-25px!important;
+    margin-left: 2%;
+    margin-right: 2%!important;
+	background-color: #004f92;
+	color: #fff;
+	border-radius:5px;
+	width: 95%!important;
+	font-size: initial;
+	text-transform: inherit!important;
+}
+.regis-button1{
+	margin-top:-25px!important;
+	background-color: #67b845;
+	color: #fff;
+	border-radius:5px;
+}
+.participate-button{
+	width:8px;
+	height:3px;
+	background-color: #67b845;
+	color: #fff;
+	border-radius:5px;
+}
+
+.my-list {
+    position: relative;
+    /* padding-top: 1px; */
+    padding-bottom: 1px;
+    padding-left: 0;
+    margin-bottom: 20px;
+	margin-top:-10%;
+    bottom: 20px;
+}
+.my-padding{margin-top:-18px;}
+
+ 
+#map {
+    width: 100%;
+    height: 30%;
+}
+.p-btn{
+	background:#67b845;
+	padding:8px 15px!important;
+	min-height:0px!important; 
+	width:115px!important; 
+	color:#fff;
+	line-height:0!important; 
+	font-size:9px!important;
+	height:0px!important;
+	font-weight:normal!important;
+	text-transform:inherit!important;
+	border-bottom:2px solid #3e7e23;
+	}
+.date-time{
+	font-weight:bold;	
+	padding-top:0!important;
+	padding-bottom:0!important;
+	font-size:10px;
+	padding-left:0px;
+	color:#004f92!important;
+	}
+.like-dislike{
+	padding-top:0!important;
+	padding-bottom:0!important;
+	font-size:8px;
+	margin-top:-11px;
+    margin-left: 9px;
+	}
+.no-padding{padding-bottom:0px;padding-top:0px;}
+
+.bar.bar-header .button+.title{
+    left: 35px;
+    line-height: 46px;
+    text-align: center;
+}
+.news-title{
+	font-weight:bold;	
+	color:#004f92!important;
+	font-size:15px !important;
+	padding-bottom:0px!important;
+}
+.news-details{
+	color:#212121!important;
+	line-height:16px;
+	font-weight:300;
+	padding-top:12px;
+	font-size:12px !important;
+}
+.item p{overflow: auto;
+    text-overflow: inherit;
+    white-space: initial;
+	width:95%;
+}
+
+.pull_text_right {
+	text-align:"right"
+}
+.row{
+	padding-top:0px;
+	padding-bottom:0px;
+}
+.col{
+	padding-top:0px;
+	padding-bottom:0px;
+}
+.row + .row {
+    margin-top: -10px;
+    padding-top: 0;
+}
+
+ /*like active*/
+ .like-active{
+	 color:#ec5d0f;
+ }
+ .like-ico{
+	 color:#b6b6b6;
+ }
+ .participate-active{
+	 color:#b6b6b6;
+ }
+ .item h3 {
+    margin: 0 0 -4px 0;
+    font-size: 14px;
+}
+.home-content{
+	color:#bbb;
+	padding-left:6%;
+	padding-right:6%;
+	height:10%;
+	height: 96px!important;
+    overflow-y: scroll;
+}
+.list-h{
+    padding-left:6%;
+	padding-right:6%;
+}
+
+.icon-menu{
+	width:22%;
+	padding:4%;
+	border-radius:8%;
+	border-style: solid;
+    border-width: 1px;
+	text-align:center;
+    color: #67b845;
+}
+.icon-menu-name{
+    padding-top: 7%;
+    padding-left: 5%;
+	color:#212121!important;
+	font-weight: bold;
+}
+.icon-image{
+	font-size:35px;
+}
+.icon-arrow{
+	padding-top:5%;
+	color: #004f92!important;
+	font-weight:bold;
+	font-size: 22px;	
+}
+.text-box-resize{
+    border: 0;
+    border-bottom: 1px solid #c2c2c2!important;
+}
+.text-area-resize{
+    border: 0;
+    border-bottom: 1px solid #c2c2c2;
+    resize: none;
+	width:100%;
+}
+.item.item-input{
+    font-family: Ionicons, "Open Sans", Verdana, sans-serif; 
+}
+/*Ionic collapsible list*/
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+.club-name{
+	font-family: 'Pacifico', cursive;
+}
+.card-head{
+	color:#6d6e6e!important;
+	padding:10px!important;
+	font-size:15px;
+	font-weight:bold;
+	border-bottom:1px solid #ccc;
+	font-family: 'Lato', sans-serif!important;
+}
+
+.card-head .icon{font-size:16px;}
+.card-body{
+	color:#212121!important;
+	padding:0px 10px!important;
+	font-size:14px!important;
+	border-bottom:1px solid #e2e2e2!important;
+	font-family: 'Lato', sans-serif!important;
+	min-height:0px!important;
+}
+
+.card-body .input-label{
+	font-size:14px!important;
+    width: 15%!important;
+}
+.card-list{
+	
+	padding:0px 10px 10px 10px!important ;
+}
+.height-min-zero{min-height:0!important;}
+
+
+
+ .update-button {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    display: inline-block;
+	width:65px;
+    height: 28px;
+    padding:0rem;
+    border-radius: 2px;
+    background-clip: padding-box;
+    text-transform: uppercase;
+    border: none;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+	 background-color: #67b845!important;
+	color: #fff;
+    font-size: 12px;
+	font-family: 'Lato', sans-serif!important;
+	text-transform:uppercase;	
+}
+.static{
+	position:static!important;
+}
+.header-member-div{
+	color:#fff!important;
+	background-color:#004f92;
+	padding:10px 0;
+}
+.err-msg{
+	padding-left:5%;
+	color:	#FF0000;
+}
+.bill-image{
+	 width: 40%;
+	 height: 40%;
+}
+/*home page*/
+.fix-content{
+	margin-bottom:10%!important;
+}
+.list-img{
+	border-radius:0px!important;
+	top:0px!important;
+	height:90px!important;
+	max-height: 65px!important;
+}
+.hotel-name{
+	display:inline-block;
+	font-size:14px;
+    font-weight:bold;
+    margin-bottom:0;
+}
+.bill-status{
+	
+	padding:2px 10px;
+	border-radius:4px;
+	background:#67b845;
+	margin-left:10px;	
+	color:#fff;
+	font-size:10px;
+	height:20px;
+	text-transform:uppercase;
+}
+
+.bill-status-two{
+	
+	padding:2px 10px;
+	border-radius:4px;
+	background:#e12543;
+	margin-left:10px;	
+	color:#fff;
+	font-size:10px;
+	height:20px;
+	text-transform:uppercase;
+}
+
+.bill-content{
+    margin:0;
+    font-size:12px;
+}
+
+.amount-section{margin-top:5px;}
+.total-amount{font-weight:bold;float:right;font-size:14px;margin-bottom:8px;}
+.bill-button{
+	padding:5px 4px;
+	font-size:11px;
+	float:right;
+    text-transform: uppercase;
+    background:#4578b8;
+    color:#fff;
+    border:1px solid #4578b8;
+}
+
+.bar {
+    border: none;
+     background-image:none;
+    background-position: bottom;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+}
+
+.tabs-top > .tabs, .tabs.tabs-top {
+    top: 0px;
+    padding-top: 0;
+    background-color: #67b845;
+    background-position: bottom;
+    border-top-width: 0;
+    border-bottom-width: 1px;
+	color:#fff;
+}
+
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+    margin-top: -6px;
+    border-style: solid;
+    border-width: 2px 0 0 0;
+    border-color: #fff !important;
+}
+.tabs-top.tabs-striped .tab-item.tab-item-active, .tabs-top.tabs-striped .tab-item.active, .tabs-top.tabs-striped .tab-item.activated {
+    margin-top: -6px;
+    border-width: 0px 0px 1px 0px !important;
+    border-style: solid;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.tabs-top.tabs-striped .tab-item {
+    background: transparent;
+    -webkit-transition: color 0.1s ease;
+    -moz-transition: color 0.1s ease;
+    -ms-transition: color 0.1s ease;
+    -o-transition: color 0.1s ease;
+    transition: color 0.1s ease;
+    margin-top: -6px!important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.border-bottom{border-bottom:1px solid #ccc;margin-bottom:10px;}
+
+.date-invoice{margin-bottom:10px;font-size:12px; font-weight:bold;color:#212121;}

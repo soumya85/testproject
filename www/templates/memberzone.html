@@ -1,0 +1,51 @@
+<ion-view class="center_title">
+	<ion-nav-title class="center_title">Member Zone</ion-nav-title> 
+    <ion-content ng-class="{expanded:$scope.isExpanded}"  class="has-footer">
+        
+		  <div class="tabs-striped tabs-top tabs-css static">
+			<div class="tabs">
+			  <a class="tab-item " ng-click="changeTabIndex(1);" ng-class="{ 'active' : tabIndex == 1 }">
+				News
+			  </a>
+			  <a class="tab-item"  ng-click="changeTabIndex(2);"  ng-class="{ 'active' : tabIndex == 2 }">
+				Events
+			  </a>
+			  <a class="tab-item"  ng-click="changeTabIndex(3);"  ng-class="{ 'active' : tabIndex == 3 }">
+				Offers
+			  </a>
+			  <a class="tab-item"  ng-click="changeTabIndex(4);"  ng-class="{ 'active' : tabIndex == 4 }">
+				More
+			  </a>
+			</div>
+		  </div>
+		  <div style="width:100%;height:5px;color:#67b845;"></div>
+		  
+		  <div ng-if="tabIndex == 1" ng-include="'templates/news.html'">
+			
+		  </div>
+		  <div ng-if="tabIndex == 2" ng-include="'templates/events.html'">
+		  </div>
+		  <div ng-if="tabIndex == 3" ng-include="'templates/offer.html'">
+		  </div>
+		  <div ng-if="tabIndex == 4" ng-include="'templates/more.html'">
+		  </div>
+		  
+		   
+      </ion-content>
+	  <ion-footer>
+		  <div class="tabs tabs-icon-top " style="height:12%;">
+				<a ui-sref="app.home" class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+					<i class="icon ion-earth" style="font-size: 24px;"></i> In Around
+				</a>
+				<a  class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+					<i class="icon ion-android-pin" style="font-size: 24px;"></i> Places
+				</a>
+				<a  class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+					<i class="icon ion-pricetag" style="font-size: 24px;"></i> Deals
+				</a>
+				 <a ui-sref="app.localevent" class="tab-item" style="padding-top:4%; line-height:4%;  font-size: 11px;">
+					<i class="icon ion-calendar" style="font-size: 24px;"></i> Events
+				</a>
+			</div>
+		</ion-footer>
+</ion-view>
